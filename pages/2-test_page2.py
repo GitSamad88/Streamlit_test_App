@@ -1,6 +1,11 @@
 import streamlit as st
 
 
-emplois=st.session_state["emplois"]
+emplois1=st.session_state["emplois1"]
+emplois2=st.session_state["emplois2"]
 
-st.write("emplois description",emplois.describe())
+
+col1, col2 = st.columns(2)
+col1.table(emplois1.describe())
+
+col2.table(emplois2.describe())
